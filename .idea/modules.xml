@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Simple_Banking_System.iml" filepath="$PROJECT_DIR$/.idea/modules/Simple_Banking_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Print  We are robots/Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/The main method/Theory/Simple_Banking_System.Topics-The_main_method-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Simple_Banking_System.util.test.iml" />
+    </modules>
+  </component>
+</project>
