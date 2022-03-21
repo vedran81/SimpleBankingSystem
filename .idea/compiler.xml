@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="17">
+      <module name="Simple_Banking_System.Simple_Banking_System-task.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Geometric_cube.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Constructor-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-A_keyword_for_creating_objects.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-Accounts.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-Complex_numbers.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-Inner_boxes.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-Points_on_the_2D_plane.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-The_keyword.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Defining_classes-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Fix_compile-time_errors.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Print_the_age.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Errors_in_programs-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Instance_methods-Counter.main" target="11" />
+      <module name="Simple_Banking_System.Topics-Instance_methods-Theory.main" target="11" />
+      <module name="Simple_Banking_System.Topics-The_main_method-Print__We_are_robots.main" target="11" />
+      <module name="Simple_Banking_System.Topics-The_main_method-Theory.main" target="11" />
+      <module name="Simple_Banking_System.util.main" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
