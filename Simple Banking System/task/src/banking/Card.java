@@ -3,11 +3,22 @@ package banking;
 import java.util.Random;
 
 public class Card {
+    private int id;
     private String cardNumber;
     private String pin;
-    private double balance;
-    static private Random random = new Random();
+    private int balance;
 
+    static private final Random random = new Random();
+
+
+    public static String newPin() {
+        String pin;
+        int lower = 1000;
+        int upper = 9999;
+        pin = Integer.toString(random.nextInt(upper - lower + 1) + lower);
+
+        return pin;
+    }
 
     public static boolean isValidCreditCardNumber(String cardNumber) {
         // int array for processing the cardNumber
@@ -29,7 +40,7 @@ public class Card {
 
         int sum = sumDigits(cardIntArray);  // step 3
 
-        System.out.println(sum);
+        //System.out.println(sum);
 
         // step 4
         return sum % 10 == 0;
@@ -37,39 +48,44 @@ public class Card {
 
     private static int sumDigits(int[] cardIntArray) {
         int res = 0;
-        for (int i = 0; i < cardIntArray.length; i++) {
-            res = res + cardIntArray[i];
+        for (int j : cardIntArray) {
+            res = res + j;
         }
         return res;
     }
 
     static public String newValidCardNumber() {
-        String tryCardNum;
-        do {
-            tryCardNum = newCardNumber();
-        } while (!isValidCreditCardNumber(tryCardNum));
-        return tryCardNum;
-    }
-
-    static public String newCardNumber() {
-        String cardNumber;
+        String cardNum;
         String bin = "400000";
-        int lowerAccNr = 100000;
-        int upperAccNr = 999999;
-
+        int lowerAccNr = 100000000;
+        int upperAccNr = 999999999;
         int accNr = random.nextInt(upperAccNr - lowerAccNr + 1) + lowerAccNr;
-        int lowerChecksum = 1000;
-        int upperChecksum = 9999;
-        int checksum = random.nextInt(upperChecksum - lowerChecksum + 1) + lowerChecksum;
-        cardNumber = bin + accNr + checksum;
-        return cardNumber;
+        String digits = bin + accNr;
+
+        int sum = 0;
+        boolean alternate = false;
+
+        for (int i = digits.length() - 1; i >= 0; --i) {
+            int digit = Character.getNumericValue(digits.charAt(i));
+            digit = (alternate = !alternate) ? (digit * 2) : digit;
+            digit = (digit > 9) ? (digit - 9) : digit;
+            sum += digit;
+        }
+        int lastDigit = (sum * 9) % 10;
+
+        cardNum = digits + lastDigit;
+
+        return cardNum;
     }
 
-    public Card() {
-        setCardNumber(newValidCardNumber());
-        setBalance(0);
-    }
+    public Card(boolean empty) {
+        if (!empty) {
+            setBalance(0);
+            setCardNumber(newValidCardNumber());
+            setPin(newPin());
+        }
 
+    }
 
     public String getCardNumber() {
         return cardNumber;
@@ -87,11 +103,19 @@ public class Card {
         this.pin = pin;
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

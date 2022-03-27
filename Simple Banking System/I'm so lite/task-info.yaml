@@ -1,17 +1,6 @@
 type: edu
 custom_name: stage3
 files:
-- name: src/banking/Main.java
-  visible: true
-  text: |-
-    package banking;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("Hello, world!");
-        }
-    }
-  learner_created: false
 - name: test/SimpleBankSystemTest.java
   visible: false
   text: |
@@ -489,6 +478,15 @@ files:
         }
     }
   learner_created: false
-feedback_link: https://hyperskill.org/projects/93/stages/517/implement#comment
-status: Unchecked
-record: -1
+- name: src/banking/CardsDaoSqlite.java
+  visible: true
+  learner_created: true
+- name: card.s3db
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/8427#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 27 Mar 2022 17:17:23 UTC
+record: 3

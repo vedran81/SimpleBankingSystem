@@ -1,17 +1,6 @@
 type: edu
 custom_name: stage4
 files:
-- name: src/banking/Main.java
-  visible: true
-  text: |-
-    package banking;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("Hello, world!");
-        }
-    }
-  learner_created: false
 - name: test/SimpleBankSystemTest.java
   visible: false
   text: |
@@ -677,6 +666,63 @@ files:
         }
     }
   learner_created: false
-feedback_link: https://hyperskill.org/projects/93/stages/518/implement#comment
-status: Unchecked
+- name: src/banking/CardsDaoSqlite.java
+  visible: true
+  text: |
+    package banking;
+
+    import java.sql.*;
+
+    public class CardsDaoSqlite {
+
+        private Connection conn;
+
+        public CardsDaoSqlite(String fileName) {
+
+            String createTableSql = "CREATE TABLE IF NOT EXISTS card (\n"
+                    + "id INTEGER PRIMARY KEY,\n"
+                    + "number TEXT,\n"
+                    + "pin TEXT,\n"
+                    + "balance INTEGER DEFAULT 0\n"
+                    + ");";
+
+
+            try {
+                conn = DriverManager.getConnection("jdbc:sqlite:" + fileName);
+
+                Statement s = conn.createStatement();
+                s.execute(createTableSql);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        public void SaveCard(Card card) {
+            String addCardSql = "INSERT INTO card (number, pin, balance) \n"
+                    + "VALUES (? ,? ,?)";
+
+            try {
+                PreparedStatement statement = conn.prepareStatement(addCardSql);
+                statement.setString(1, card.getCardNumber());
+                statement.setString(2, card.getPin());
+                statement.setInt(3, card.getBalance());
+
+                statement.execute();
+
+                card.setId(statement.getGeneratedKeys().getInt(1));
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+
+            }
+        }
+    }
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/8428#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Sun, 27 Mar 2022 19:03:05 UTC
 record: -1
