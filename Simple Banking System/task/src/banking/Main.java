@@ -1,6 +1,5 @@
 package banking;
 
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -63,6 +62,7 @@ public class Main {
                                 workCard.setBalance(workCard.getBalance() - transferAmount);
                                 destCard.setBalance(destCard.getBalance() + transferAmount);
                                 dao.updateCards(new Card[]{workCard, destCard});
+                                System.out.println("Success!");
                             } else System.out.println("Not enough money!");
                         } else System.out.println("Such a card does not exist.");
                     } else System.out.println("Probably you made a mistake in the card number.\nPlease try again!");
